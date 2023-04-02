@@ -1,19 +1,13 @@
 #!/usr/bin/python3
 """
-Module using request that fetches https://intranet.hbtn.io/status
+Same as Task 0 but using request package
 """
+
 import requests
 
 
-def main():
-    """
-    Function that fetches https://intranet.hbtn.io/status
-    """
-    url = 'https://intranet.hbtn.io/status'
-    r = requests.get(url)
-    print('Body response:')
-    print('\t- type: {}'.format(type(r.text)))
-    print('\t- content: {}'.format(r.text))
-
 if __name__ == "__main__":
-    main()
+    response = requests.get('https://intranet.hbtn.io/status')
+    print("Body response:")
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
